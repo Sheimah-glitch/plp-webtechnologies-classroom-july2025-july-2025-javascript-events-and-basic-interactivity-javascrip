@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">    
+    <title>HTML Enhanced Form</title>
+  </head>
+  <body>
+    <header>
+      <img src="image/Cafe.png" alt="Cafe Logo" id="cafe">
+    </header>
+
+    <h1>Café Menu</h1>
+    <div class="flex-container">
+    <div class="flex">
+    <h3>Desserts</h3>
+    <ol>
+      <li>Chocolate Cake</li>
+      <li>Vanilla Ice Cream</li>
+      <li>Strawberry Cheesecake</li>
+    </ol>
+    </div>
+    <div class="flex">
+    <h3>Drinks</h3>
+    <ol>
+      <li>Mango Smoothie</li>
+      <li>Iced Coffee</li>
+      <li>Green Tea</li>
+      <li>Lemonade</li>
+    </ol>
+    </div>
+    <div class="flex">
+    <h3>Available Snacks</h3>
+    <ol>
+      <li>Chicken Sandwich</li>
+      <li>Veggie Wrap</li>
+      <li>French Fries</li>
+    </ol>
+    </div>
+    </div>
+
+    <h2>New Recipe</h2>
+    <div class="price-list">
+      <div class="item header">Item</div>
+      <div class="price header">Price</div>
+      <div class="item">
+      Tomato Soup
+      </div>
+      <div class="price">
+      <p>$5</p>
+      </div>
+      <div class="item">
+      Cheeseburger
+      </div>
+      <div class="price">
+      <p>$5</p>
+      </div>
+      <div class="item">
+      Croissants
+      </div>
+      <div class="price">
+      <p>$5</p>
+      </div>
+      <div class="item">
+      Muffins
+      </div>
+      <div class="price">
+      <p>$5</p>
+      </div>
+      <div class="item">
+      Bagels
+      </div>
+      <div class="price">
+      <p>$5</p>
+      </div>
+    </div>
+
+    <h2>Price</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Drinks</td>
+          <td>$8</td>
+        </tr>
+        <tr>
+          <td>Desserts</td>
+          <td>$6</td>
+        </tr>
+        <tr>
+          <td>Available Snacks</td>
+          <td>$5</td>
+        </tr>
+        <tr>
+          <td>New snacks/recipes</td>
+          <td>Free of Charge</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Most Loved Snack</h2>
+    <h4>Chicken Sandwich</h4>
+    <img src="image/Chicken.jpeg"  alt="Chicken Sandwich" id="chicken">
+
+    <h2>Place Your Order</h2>
+<form id="myform" action="order.php" method="post" enctype="multipart/form-data" autocomplete="on">
+
+  <p class="review">Personal Information</p>
+  <fieldset>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <span id="nameError" class="error"></span>
+    <br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    <span id="emailError" class="error"></span>
+    <br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="0712345678" pattern="[0-9]{10}" required>
+    <span id="phoneError" class="error"></span>
+  </fieldset>
+  <br><br>
+
+  <p class="review">Order Details</p>
+  <fieldset>
+    <label for="location">Delivery Location:</label>
+    <input type="text" id="location" name="location" placeholder="Your delivery address" required>
+    <span id="locationError" class="error"></span>
+    <br><br>
+
+    <label for="payment">Payment Method:</label>
+    <select id="payment" name="payment" required>
+      <option value="">--Select Payment Method--</option>
+      <option value="cash">Cash on Delivery</option>
+      <option value="card">Credit/Debit Card</option>
+      <option value="mpesa">M-Pesa</option>
+    </select>
+    <span id="paymentError" class="error"></span>
+    <br><br>
+
+    <label>Extras:</label><br>
+    <input type="checkbox" id="extra1" name="extras" value="extra sauce">
+    <label for="extra1">Extra Sauce</label>
+    <input type="checkbox" id="extra2" name="extras" value="cheese" class="input">
+    <label for="extra2">Extra Cheese</label>
+    <br><br>
+
+    <label for="orderDate">Preferred Delivery Date:</label>
+    <input type="date" id="orderDate" name="orderDate" required>
+    <span id="orderdateError" class="error"></span>
+    <br><br>
+
+    <label for="file">Upload Receipt (optional):</label>
+    <input type="file" id="file" name="file">
+  </fieldset>
+  <br><br>
+
+  <p class="review">Review</p>
+  <fieldset>
+    <label for="review">Write Your Review:</label><br>
+    <textarea id="review" name="review" rows="4" cols="50" placeholder="Your feedback here..." minlength="10" required></textarea>
+  </fieldset>
+  <br><br>
+
+  <button type="submit" value="Submit Order" class="input">Submit</button>
+  <button type="reset" value="Reset Form" class="input">Reset form</button>
+</form>
+
+<!-- Area for success / confirmation messages -->
+<div id="messageArea"></div>
+
+
+    <footer>
+      &copy; Maimuna's Cafe Inspo 2025
+    </footer>
+    <script src="script/script.js"></script>
+  </body>
+</html>
